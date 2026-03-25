@@ -86,7 +86,7 @@ const workerConfig: WorkerConfig = {
   ],
   // notification: {
   //   webhook: {
-  //     url: 'https://api.telegram.org/bot8725031808:AAGxs2XHmkZ_OwuXl-jrMk-gR54neWa4qxM/sendMessage',
+  //     url: 'https://api.telegram.org/bot8725031808:AAGxsdasda2XHmkZ_OwuXl-jrMk-gR54neWa4qxM/sendMessage',
   //     payloadType: 'param',
   //     payload: {
   //       chat_id: 7381939387,
