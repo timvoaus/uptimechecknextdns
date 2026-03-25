@@ -24,61 +24,61 @@ const workerConfig: WorkerConfig = {
       name: 'NextDNS AnyCast - 45.90.30.0', 
       method: 'TCP_PING', 
       target: '45.90.30.0:53', 
-      checkProxy: 'worker://oc'
+      checkProxy: 'worker://apac'
     }, 
     { 
       id: 'viettel_han', 
       name: 'NextDNS Ultralow - Viettel Hanoi', 
       method: 'GET', 
       target: 'https://viettel-han-1.edge.nextdns.io/resolve?name=dns.nextdns.io', 
-      checkProxy: 'worker://oc'
+      checkProxy: 'worker://apac'
     }, 
     { 
       id: 'viettel_sgn', 
       name: 'NextDNS Ultralow - Viettel Saigon', 
       method: 'GET', 
       target: 'https://viettel-sgn-1.edge.nextdns.io/resolve?name=dns.nextdns.io', 
-      checkProxy: 'worker://oc'
+      checkProxy: 'worker://apac'
     }, 
     { 
       id: 'lightnode_han', 
       name: 'NextDNS Ultralow - Ligthnode Hanoi', 
       method: 'GET', 
       target: 'https://lightnode-han-1.edge.nextdns.io/resolve?name=dns.nextdns.io',
-      checkProxy: 'worker://oc'
+      checkProxy: 'worker://apac'
     },      
     { 
       id: 'lightnode_sgn', 
       name: 'NextDNS Ultralow - Lightnode Saigon', 
       method: 'GET', 
       target: 'https://lightnode-sgn-1.edge.nextdns.io/resolve?name=dns.nextdns.io',
-      checkProxy: 'worker://oc'
+      checkProxy: 'worker://apac'
     },      
     { 
       id: 'opendns', 
       name: 'OpenDNS - 208.67.222.222', 
       method: 'TCP_PING', 
       target: '208.67.222.222:53',
-      checkProxy: 'worker://oc'
+      checkProxy: 'worker://apac'
     },      
     { 
       id: 'quad9', 
       name: 'Quad9 ECS - 9.9.9.11', 
       method: 'TCP_PING', 
       target: '9.9.9.11:53', 
-      checkProxy: 'worker://oc'
+      checkProxy: 'worker://apac'
     },  
     { id: 'cloudfare', 
      name: 'CloudFlare DNS - 1.1.1.1', 
      method: 'TCP_PING', 
-     target: '1.1.1.1:53', 
-     checkProxy: 'worker://oc'
+     target: '1.1.1.1', 
+     checkProxy: 'worker://apac'
     },
     { id: 'adguard', 
      name: 'Adguard Public DNS - 94.140.14.14', 
      method: 'TCP_PING', 
      target: '94.140.14.14:53', 
-     checkProxy: 'worker://oc'
+     checkProxy: 'worker://apac'
     },        
   ],
   // notification: {
