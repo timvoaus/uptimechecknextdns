@@ -6,7 +6,7 @@ const pageConfig: PageConfig = {
   // Links shown at the header of your status page, could set `highlight` to `true`
   group: {
     '🌐 NextDNS': ['45_90_28_0', '45_90_30_0', 'viettel_han', 'viettel_sgn', 'lightnode_han', 'lightnode_sgn'],
-    '🌐 Others': ['opendns', 'quad9', 'cloudfare', 'adguard'],
+    '🌐 Others': ['opendns', 'quad9', 'google', 'adguard'],
   },  
 }
 
@@ -68,10 +68,10 @@ const workerConfig: WorkerConfig = {
       target: '9.9.9.11:53', 
       checkProxy: 'worker://apac'
     },  
-    { id: 'cloudfare', 
-     name: 'CloudFlare DNS - 1.1.1.1', 
+    { id: 'google', 
+     name: 'Google DNS - 8.8.8.8', 
      method: 'TCP_PING', 
-     target: '1.1.1.1', 
+     target: '8.8.8.8:53', 
      checkProxy: 'worker://apac'
     },
     { id: 'adguard', 
