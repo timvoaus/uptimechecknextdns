@@ -1,0 +1,174 @@
+/* ============================================================
+   HEADER — Refractive Liquid Glass Pill
+   ============================================================ */
+
+.header {
+  height: 64px;
+  width: calc(100vw - 32px);
+  max-width: 865px;
+  margin: 0 auto 32px auto;
+  padding: 0 18px 0 0;
+
+  position: sticky;
+  top: 16px;
+  z-index: 100;
+
+  background: light-dark(rgba(255, 255, 255, 0.09), rgba(16, 24, 40, 0.16)) !important;
+  border: 1px solid light-dark(rgba(255, 255, 255, 0.58), rgba(255, 255, 255, 0.18)) !important;
+  backdrop-filter: blur(24px) saturate(180%) brightness(1.08) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(180%) brightness(1.08) !important;
+  box-shadow: 0 12px 30px rgba(17, 24, 39, 0.13) !important;
+  border-radius: 9999px;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  contain: layout paint;
+}
+
+[data-mantine-color-scheme="dark"] .header {
+  background: rgba(7, 17, 34, 0.64) !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28) !important;
+}
+
+.inner {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 !important;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logoButton {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  height: 100%;
+  width: 118px;
+  position: relative;
+  transition: opacity 0.2s ease;
+}
+
+.logoButton:active {
+  opacity: 0.85;
+}
+
+.logoButton:focus-visible {
+  outline: 2px solid var(--status-green);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+.logoOrbContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 64px;
+  min-width: 64px;
+}
+
+.logoOrbContainer canvas {
+  display: block !important;
+  width: 64px !important;
+  height: 64px !important;
+  margin: 0 !important;
+}
+
+@media (min-width: 48em) {
+  .logoButton {
+    width: 180px;
+  }
+}
+
+.link,
+.themeToggle {
+  background: light-dark(rgba(255, 255, 255, 0.13), rgba(16, 24, 40, 0.20)) !important;
+  border: 1px solid light-dark(rgba(255, 255, 255, 0.58), rgba(255, 255, 255, 0.18)) !important;
+  backdrop-filter: blur(18px) saturate(175%) brightness(1.08) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(175%) brightness(1.08) !important;
+  box-shadow: 0 6px 16px rgba(17, 24, 39, 0.10) !important;
+  transition: all 0.2s ease !important;
+}
+
+[data-mantine-color-scheme="dark"] .link,
+[data-mantine-color-scheme="dark"] .themeToggle {
+  background: rgba(8, 18, 35, 0.64) !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22) !important;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding: 8px 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.link[data-active="true"] {
+  background: light-dark(rgba(0, 0, 0, 0.06), rgba(255, 255, 255, 0.22)) !important;
+  color: var(--text-primary) !important;
+}
+
+.themeToggle {
+  border-radius: 999px !important;
+  color: var(--text-primary) !important;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 47.99375em) {
+  .header {
+    width: calc(100vw - 20px);
+    top: 10px;
+    margin-bottom: 24px;
+    padding-right: 12px;
+    backdrop-filter: blur(20px) saturate(180%) brightness(1.08) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) brightness(1.08) !important;
+  }
+
+  .link,
+  .themeToggle {
+    backdrop-filter: blur(14px) saturate(175%) brightness(1.08) !important;
+    -webkit-backdrop-filter: blur(14px) saturate(175%) brightness(1.08) !important;
+  }
+
+  .inner {
+    gap: 6px;
+  }
+
+  .link {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .themeToggle {
+    width: 32px !important;
+    min-width: 32px !important;
+    height: 32px !important;
+  }
+}

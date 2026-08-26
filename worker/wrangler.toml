@@ -1,0 +1,28 @@
+name = "uptimeflare_worker"
+main = "src/index.ts"
+compatibility_date = "2025-04-02"
+compatibility_flags = [ "nodejs_compat" ]
+
+[[d1_databases]]
+binding = "UPTIMEFLARE_D1"
+database_name = "uptimeflare_d1"
+database_id = "55a4a8a3-18bb-4e8a-a0c7-8426cf11062b"
+
+[[durable_objects.bindings]]
+name = "REMOTE_CHECKER_DO"
+class_name = "RemoteChecker"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["RemoteChecker"]
+
+[[migrations]]
+tag = "v2"
+new_sqlite_classes = ["MonitorScheduler"]
+
+[[migrations]]
+tag = "v3"
+deleted_classes = ["MonitorScheduler"]
+
+[triggers]
+crons = [ "* * * * *" ]
